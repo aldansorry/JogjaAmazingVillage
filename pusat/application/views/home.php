@@ -14,16 +14,16 @@
 
 	<!-- Stylesheets -->
 
-	<link href="common-css/bootstrap.css" rel="stylesheet">
+	<link href="<?php 	echo base_url('assets_home/'); ?>common-css/bootstrap.css" rel="stylesheet">
 
-	<link href="common-css/ionicons.css" rel="stylesheet">
+	<link href="<?php 	echo base_url('assets_home/'); ?>common-css/ionicons.css" rel="stylesheet">
 
-	<link href="common-css/layerslider.css" rel="stylesheet">
+	<link href="<?php 	echo base_url('assets_home/'); ?>common-css/layerslider.css" rel="stylesheet">
 
 
-	<link href="01-homepage/css/styles.css" rel="stylesheet">
+	<link href="<?php 	echo base_url('assets_home/'); ?>01-homepage/css/styles.css" rel="stylesheet">
 
-	<link href="01-homepage/css/responsive.css" rel="stylesheet">
+	<link href="<?php 	echo base_url('assets_home/'); ?>01-homepage/css/responsive.css" rel="stylesheet">
 
 </head>
 <body>
@@ -59,7 +59,7 @@
 
 		</div><!-- top-menu -->
 
-		<div class="middle-menu center-text"><a href="#" class="logo"><img src="images/logo.png" alt="Logo Image"></a></div>
+		<div class="middle-menu center-text"><a href="#" class="logo"><img src="<?php 	echo base_url('assets_home/'); ?>images/logo.png" alt="Logo Image"></a></div>
 
 		<div class="bottom-area">
 
@@ -95,7 +95,7 @@
 		<div id="slider">
 
 			<div class="ls-slide" data-ls="bgsize:cover; bgposition:50% 50%; duration:4000; transition2d:104; kenburnsscale:1.00;">
-				<img src="images/slider-1-1600x800.jpg" class="ls-bg" alt="" />
+				<img src=" <?php echo base_url('assets_home/');?>images/slider-1-1600x800.jpg" class="ls-bg" alt="" />
 
 					<div class="slider-content ls-l" style="top:60%; left:30%;" data-ls="offsetyin:100%; offsetxout:-50%; durationin:800; delayin:100; durationout:400; parallaxlevel:0;">
 						<a class="btn" href="#">TRAVEL</a>
@@ -106,7 +106,7 @@
 			</div><!-- ls-slide -->
 
 			<div class="ls-slide" data-ls="bgsize:cover; bgposition:50% 50%; duration:4000; transition2d:104; kenburnsscale:1.00;">
-				<img src="images/slider-2-1600x800.jpg" class="ls-bg" alt="" />
+				<img src="<?php echo base_url('assets_home/');?>images/slider-2-1600x800.jpg" class="ls-bg" alt="" />
 
 					<div class="slider-content ls-l" style="top:60%; left:30%;" data-ls="offsetyin:100%; offsetxout:-50%; durationin:800; delayin:100; durationout:400; parallaxlevel:0;">
 						<a class="btn" href="#">TRAVEL</a>
@@ -128,7 +128,7 @@
 					<div class="blog-posts">
 
 						<div class="single-post">
-							<div class="image-wrapper"><img src="images/blog-1-1000x600.jpg" alt="Blog Image"></div>
+							<div class="image-wrapper"><img src=" <?php echo base_url('assets_home/');?>images/blog-1-1000x600.jpg" alt="Blog Image"></div>
 
 							<div class="icons">
 								<div class="left-area">
@@ -151,7 +151,7 @@
 						</div><!-- single-post -->
 
 						<div class="single-post">
-							<div class="image-wrapper"><img src="images/blog-2-1000x600.jpg" alt="Blog Image"></div>
+							<div class="image-wrapper"><img src="<?php echo base_url('assets_home/'); ?>images/blog-2-1000x600.jpg" alt="Blog Image"></div>
 
 							<div class="icons">
 								<div class="left-area">
@@ -177,7 +177,7 @@
 
 							<div class="col-lg-6 col-md-12">
 								<div class="single-post">
-									<div class="image-wrapper"><img src="images/blog-3-500x400.jpg" alt="Blog Image"></div>
+									<div class="image-wrapper"><img src="<?php echo base_url('assets_home/'); ?>images/blog-3-500x400.jpg" alt="Blog Image"></div>
 
 									<div class="icons">
 										<div class="left-area">
@@ -197,10 +197,9 @@
 									<a class="btn read-more-btn" href="#"><b>READ MORE</b></a>
 								</div><!-- single-post -->
 							</div><!-- col-sm-6 -->
-
 							<div class="col-lg-6 col-md-12">
 								<div class="single-post">
-									<div class="image-wrapper"><img src="images/blog-4-500x400.jpg" alt="Blog Image"></div>
+									<div class="image-wrapper"><img src="<php <?php echo base_url('assets_home/');?>images/blog-4-500x400.jpg" alt="Blog Image"></div>
 
 									<div class="icons">
 										<div class="left-area">
@@ -223,7 +222,7 @@
 
 							<div class="col-lg-6 col-md-12">
 								<div class="single-post">
-									<div class="image-wrapper"><img src="images/blog-5-500x400.jpg" alt="Blog Image"></div>
+									<div class="image-wrapper"><img src=" <?php 	echo base_url('assets_home/'); ?>images/blog-5-500x400.jpg" alt="Blog Image"></div>
 
 									<div class="icons">
 										<div class="left-area">
@@ -246,7 +245,7 @@
 
 							<div class="col-lg-6 col-md-12">
 								<div class="single-post">
-									<div class="image-wrapper"><img src="images/blog-6-500x400.jpg" alt="Blog Image"></div>
+									<div class="image-wrapper"><img src="<?php 	echo base_url('assets_home/'); ?>images/blog-6-500x400.jpg" alt="Blog Image"></div>
 
 									<div class="icons">
 										<div class="left-area">
@@ -270,7 +269,7 @@
 							<div class="col-lg-12 col-md-12">
 								<div class="single-post post-style-2">
 									<div class="image-wrapper width-50 left-area">
-										<img src="images/blog-7-500x400.jpg" alt="Blog Image"></div>
+										<img src=" <?php 	echo base_url('assets_home/'); ?>images/blog-7-500x400.jpg" alt="Blog Image"></div>
 
 									<div class="post-details width-50 right-area">
 
@@ -307,7 +306,7 @@
 					<div class="sidebar-area">
 
 						<div class="sidebar-section about-author center-text">
-							<div class="author-image"><img src="images/author-1-200x200.jpg" alt="Autohr Image"></div>
+							<div class="author-image"><img src="<?php 	echo base_url('assets_home/'); ?>images/author-1-200x200.jpg" alt="Autohr Image"></div>
 
 							<ul class="social-icons">
 								<li><a href="#"><i class="ion-social-facebook-outline"></i></a></li>
@@ -321,7 +320,7 @@
 							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
 								dolore magnam aliquam quaerat voluptatem.</p>
 
-							<div class="signature-image"><img src="images/signature-image.png" alt="Signature Image"></div>
+							<div class="signature-image"><img src="<?php 	echo base_url('assets_home/'); ?>images/signature-image.png" alt="Signature Image"></div>
 							<a class="read-more-link" href="#"><b>READ MORE</b></a>
 
 						</div><!-- sidebar-section about-author -->
@@ -346,21 +345,21 @@
 						<div class="sidebar-section category-area">
 							<h4 class="title"><b class="light-color">Categories</b></h4>
 							<a class="category" href="#">
-								<img src="images/category-1-400x150.jpg" alt="Category Image">
+								<img src="<?php 	echo base_url('assets_home/'); ?>images/category-1-400x150.jpg" alt="Category Image">
 								<h6 class="name">TRAVEL</h6>
 							</a>
 
 							<a class="category" href="#">
-								<img src="images/category-2-400x150.jpg" alt="Category Image">
+								<img src="<?php 	echo base_url('assets_home/'); ?>images/category-2-400x150.jpg" alt="Category Image">
 								<h6 class="name">FASHION</h6>
 							</a>
 
 							<a class="category" href="#">
-								<img src="images/category-3-400x150.jpg" alt="Category Image">
+								<img src="<?php 	echo base_url('assets_home/'); ?>images/category-3-400x150.jpg" alt="Category Image">
 								<h6 class="name">LIFESTYLE</h6>
 							</a>
 							<a class="category" href="#">
-								<img src="images/category-4-400x150.jpg" alt="Category Image">
+								<img src="<?php 	echo base_url('assets_home/'); ?>images/category-4-400x150.jpg" alt="Category Image">
 								<h6 class="name">DESIGN</h6>
 							</a>
 						</div><!-- sidebar-section category-area -->
@@ -369,7 +368,7 @@
 							<h4 class="title"><b class="light-color">Latest Posts</b></h4>
 
 							<div class="latest-post" href="#">
-								<div class="l-post-image"><img src="images/recent-post-1-150x200.jpg" alt="Category Image"></div>
+								<div class="l-post-image"><img src="<?php 	echo base_url('assets_home/'); ?>images/recent-post-1-150x200.jpg" alt="Category Image"></div>
 								<div class="post-info">
 									<a class="btn category-btn" href="#">TRAVEL</a>
 									<h5><a href="#"><b class="light-color">One more night in the clubs</b></a></h5>
@@ -378,7 +377,7 @@
 							</div>
 
 							<div class="latest-post" href="#">
-								<div class="l-post-image"><img src="images/recent-post-2-150x200.jpg" alt="Category Image"></div>
+								<div class="l-post-image"><img src="<?php 	echo base_url('assets_home/'); ?>images/recent-post-2-150x200.jpg" alt="Category Image"></div>
 								<div class="post-info">
 									<a class="btn category-btn" href="#">TRAVEL</a>
 									<h5><a href="#"><b class="light-color">Travel lights in winter</b></a></h5>
@@ -386,7 +385,7 @@
 								</div>
 							</div>
 							<div class="latest-post" href="#">
-								<div class="l-post-image"><img src="images/recent-post-3-150x200.jpg" alt="Category Image"></div>
+								<div class="l-post-image"><img src="<?php 	echo base_url('assets_home/'); ?>images/recent-post-3-150x200.jpg" alt="Category Image"></div>
 								<div class="post-info">
 									<a class="btn category-btn" href="#">TRAVEL</a>
 									<h5><a href="#"><b class="light-color">How to travel with no money</b></a></h5>
@@ -395,7 +394,7 @@
 							</div>
 
 							<div class="latest-post" href="#">
-								<div class="l-post-image"><img src="images/recent-post-4-150x200.jpg" alt="Category Image"></div>
+								<div class="l-post-image"><img src="<?php 	echo base_url('assets_home/'); ?>images/recent-post-4-150x200.jpg" alt="Category Image"></div>
 								<div class="post-info">
 									<a class="btn category-btn" href="#">TRAVEL</a>
 									<h5><a href="#"><b class="light-color">Smile 10 times a day</b></a></h5>
@@ -408,7 +407,7 @@
 						<div class="sidebar-section advertisement-area">
 							<h4 class="title"><b class="light-color">Advertisement</b></h4>
 							<a class="advertisement-img" href="#">
-								<img src="images/advertise-1-400x500.jpg" alt="Advertisement Image">
+								<img src="<?php 	echo base_url('assets_home/'); ?>images/advertise-1-400x500.jpg" alt="Advertisement Image">
 								<h6 class="btn btn-2 discover-btn">DISCOVER</h6>
 							</a>
 						</div><!-- sidebar-section advertisement-area -->
@@ -416,13 +415,13 @@
 						<div class="sidebar-section instagram-area">
 							<h4 class="title"><b class="light-color">Instagram</b></h4>
 							<ul class="instagram-img">
-								<li><a href="#"><img src="images/instragram-side-1-150x150.jpg" alt="Instagram Image"></a></li>
-								<li><a href="#"><img src="images/instragram-side-2-150x150.jpg" alt="Instagram Image"></a></li>
-								<li><a href="#"><img src="images/instragram-side-3-150x150.jpg" alt="Instagram Image"></a></li>
+								<li><a href="#"><img src="<?php 	echo base_url('assets_home/'); ?>images/instragram-side-1-150x150.jpg" alt="Instagram Image"></a></li>
+								<li><a href="#"><img src="<?php 	echo base_url('assets_home/'); ?>images/instragram-side-2-150x150.jpg" alt="Instagram Image"></a></li>
+								<li><a href="#"><img src="<?php 	echo base_url('assets_home/'); ?>images/instragram-side-3-150x150.jpg" alt="Instagram Image"></a></li>
 								<div class="clearfix"></div>
-								<li><a href="#"><img src="images/instragram-side-4-150x150.jpg" alt="Instagram Image"></a></li>
-								<li><a href="#"><img src="images/instragram-side-5-150x150.jpg" alt="Instagram Image"></a></li>
-								<li><a href="#"><img src="images/instragram-side-6-150x150.jpg" alt="Instagram Image"></a></li>
+								<li><a href="#"><img src="<?php 	echo base_url('assets_home/'); ?>images/instragram-side-4-150x150.jpg" alt="Instagram Image"></a></li>
+								<li><a href="#"><img src="<?php 	echo base_url('assets_home/'); ?>images/instragram-side-5-150x150.jpg" alt="Instagram Image"></a></li>
+								<li><a href="#"><img src="<?php 	echo base_url('assets_home/'); ?>images/instragram-side-6-150x150.jpg" alt="Instagram Image"></a></li>
 							</ul>
 						</div><!-- sidebar-section instagram-area -->
 
@@ -459,13 +458,13 @@
 		</div><!-- container -->
 
 		<ul class="instagram">
-			<li><a href="#"><img src="images/instragram-1-300x400.jpg" alt="Instagram Image"></a></li>
-			<li><a href="#"><img src="images/instragram-2-300x400.jpg" alt="Instagram Image"></a></li>
-			<li><a href="#"><img src="images/instragram-3-300x400.jpg" alt="Instagram Image"></a></li>
-			<li><a href="#"><img src="images/instragram-4-300x400.jpg" alt="Instagram Image"></a></li>
-			<li><a href="#"><img src="images/instragram-5-300x400.jpg" alt="Instagram Image"></a></li>
-			<li><a href="#"><img src="images/instragram-6-300x400.jpg" alt="Instagram Image"></a></li>
-			<li><a href="#"><img src="images/instragram-7-300x400.jpg" alt="Instagram Image"></a></li>
+			<li><a href="#"><img src="<?php 	echo base_url('assets_home/'); ?>images/instragram-1-300x400.jpg" alt="Instagram Image"></a></li>
+			<li><a href="#"><img src="<?php 	echo base_url('assets_home/'); ?>images/instragram-2-300x400.jpg" alt="Instagram Image"></a></li>
+			<li><a href="#"><img src="<?php 	echo base_url('assets_home/'); ?>images/instragram-3-300x400.jpg" alt="Instagram Image"></a></li>
+			<li><a href="#"><img src="<?php 	echo base_url('assets_home/'); ?>images/instragram-4-300x400.jpg" alt="Instagram Image"></a></li>
+			<li><a href="#"><img src="<?php 	echo base_url('assets_home/'); ?>images/instragram-5-300x400.jpg" alt="Instagram Image"></a></li>
+			<li><a href="#"><img src="<?php 	echo base_url('assets_home/'); ?>images/instragram-6-300x400.jpg" alt="Instagram Image"></a></li>
+			<li><a href="#"><img src="<?php 	echo base_url('assets_home/'); ?>images/instragram-7-300x400.jpg" alt="Insta<?php 	echo base_url('assets_home/'); ?>gram Image"></a></li>
 		</ul>
 	</section><!-- section -->
 
@@ -499,15 +498,15 @@
 
 	<!-- SCIPTS -->
 
-	<script src="common-js/jquery-3.1.1.min.js"></script>
+	<script src="<?php echo base_url('assets_home/'); ?>common-js/jquery-3.1.1.min.js"></script>
 
-	<script src="common-js/tether.min.js"></script>
+	<script src="<?php echo base_url('assets_home/'); ?>common-js/tether.min.js"></script>
 
-	<script src="common-js/bootstrap.js"></script>
+	<script src="<?php echo base_url('assets_home/'); ?>common-js/bootstrap.js"></script>
 
-	<script src="common-js/layerslider.js"></script>
+	<script src="<?php echo base_url('assets_home/'); ?>common-js/layerslider.js"></script>
 
-	<script src="common-js/scripts.js"></script>
+	<script src="<?php echo base_url('assets_home/'); ?>common-js/scripts.js"></script>
 
 </body>
 </html>
