@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Datatable - srtdash</title>
+    <title>Datatable - Dinas Pariwisata DIY</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="<?php echo base_url('assets/') ?>assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="<?php echo base_url('assets/') ?>assets/css/bootstrap.min.css">
@@ -48,7 +48,7 @@
         <div class="sidebar-menu">
             <div class="sidebar-header">
                 <div class="logo">
-                    <a href="index.html"><img src="<?php echo base_url('assets/') ?>assets/images/icon/logo.png" alt="logo"></a>
+                    <a href="index.html"><img src="<?php echo base_url('assets/') ?>assets/images/icon/logo2.png" alt="logo"></a>
                 </div>
             </div>
             <div class="main-menu">
@@ -56,11 +56,14 @@
                     <nav>
                         <ul class="metismenu" id="menu">
                             <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-dashboard"></i><span>dashboard</span></a>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-dashboard"></i><span>Menu</span></a>
                                 <ul class="collapse">
-                                    <li><a href="index.html">Bagus</a></li>
-                                    <li><a href="index2.html">Ecommerce dashboard</a></li>
-                                    <li><a href="index3.html">SEO dashboard</a></li>
+                                    <li><a href="Kategori">Kategori</a></li>
+                                    <li><a href="galeri">Galeri</a></li>
+                                    <li><a href="objekwisata">Objek Wisata</a></li>
+                                    <li><a href="agenda">Agenda</a></li>
+                                    <li><a href="news">News</a></li>
+
                                 </ul>
                             </li>
 

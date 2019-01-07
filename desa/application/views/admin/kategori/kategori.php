@@ -7,8 +7,7 @@
             <div class="breadcrumbs-area clearfix">
                 <h4 class="page-title pull-left">Dashboard</h4>
                 <ul class="breadcrumbs pull-left">
-                    <li><a href="index.html">Home</a></li>
-                    <li><span>Datatable</span></li>
+                  
                 </ul>
             </div>
         </div>
@@ -33,8 +32,8 @@
 <div class="col-12 mt-5">
     <div class="card">
         <div class="card-body">
-            <h4 class="header-title">Data Table Dark</h4>
-            <button type="button" class="btn btn-primary btn-flat mb-3" onclick="input_form();">Launch demo modal</button>
+            <h4 class="header-title">Data Kategori</h4>
+            <button type="button" class="btn btn-primary btn-flat mb-3" onclick="input_form();">Tambah Data</button>
             <div class="data-tables datatable-dark">
                 <table id="product-table" class="display nowrap table table-striped table-bordered" cellspacing="0" width="100%">
                     <thead class="text-capitalize">
@@ -44,27 +43,6 @@
                             <th>Action</th>
                         </tr>
                     </thead>
-                </table>
-
-                <table id="dataTable3" class="text-center">
-                    <thead class="text-capitalize">
-                        <tr>
-                            <th>No</th>
-                            <th>Nama</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Airi Satou</td>
-                            <td>Accountant</td>
-                            <td>
-                                <a href="#" class="btn btn-flat btn-success btn-sm">Update</a>
-                                <a href="#" class="btn btn-flat btn-danger btn-sm">Delete</a>
-                            </td>
-                        </tr>
-                        
-                    </tbody>
                 </table>
             </div>
         </div>

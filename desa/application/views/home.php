@@ -33,9 +33,9 @@
 		<div class="top-menu">
 
 			<ul class="left-area welcome-area">
-				<li class="hello-blog">Hello nice people, welcome to my blog</li>
-				<li><a href="mailto:contact@juliblog.com">contact@juliblog.com</a></li>
-			</ul><!-- left-area -->
+				<li class="hello-blog">Dinas Pariwisata Daerah Istimewa Yogyakarta</li>
+				<!-- <li><a href="mailto:contact@juliblog.com">contact@juliblog.com</a></li> -->
+			</ul>
 
 
 			<div class="right-area">
@@ -45,23 +45,15 @@
 						<input class="src-input" type="text" placeholder="Search">
 						<button class="src-btn" type="submit"><i class="ion-ios-search-strong"></i></button>
 					</form>
-				</div><!-- src-area -->
+				</div>
+			</div>
 
-				<ul class="social-icons">
-					<li><a href="#"><i class="ion-social-facebook-outline"></i></a></li>
-					<li><a href="#"><i class="ion-social-twitter-outline"></i></a></li>
-					<li><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
-					<li><a href="#"><i class="ion-social-vimeo-outline"></i></a></li>
-					<li><a href="#"><i class="ion-social-pinterest-outline"></i></a></li>
-				</ul><!-- right-area -->
+		</div>
 
-			</div><!-- right-area -->
-
-		</div><!-- top-menu -->
-
-		<div class="middle-menu center-text"><a href="#" class="logo"><img src="<?php 	echo base_url('assets_home/'); ?>images/logo.png" alt="Logo Image"></a></div>
+		<div class="middle-menu center-text"><a href="#" class="logo"><img src="<?php 	echo base_url('assets_home/'); ?>images/logo.jpg" alt="Logo Image"></a></div>
 
 		<div class="bottom-area">
+			
 
 			<div class="menu-nav-icon" data-nav-menu="#main-menu"><i class="ion-navicon"></i></div>
 
@@ -81,13 +73,13 @@
 					</ul>
 
 				</li>
-				<li><a href="#">FEATURED</a></li>
 				<li><a href="#">ABOUT</a></li>
 				<li><a href="#">CATEGORIES</a></li>
 				<li><a href="#">CONTACT</a></li>
-			</ul><!-- main-menu -->
+			</ul><! main-menu
+		</div>
+		
 
-		</div><!-- conatiner -->
 	</header>
 
 
@@ -176,94 +168,22 @@
 						<div class="row">
 
 							<div class="col-lg-6 col-md-12">
-								<div class="single-post">
-									<div class="image-wrapper"><img src="<?php echo base_url('assets_home/'); ?>images/blog-3-500x400.jpg" alt="Blog Image"></div>
-
-									<div class="icons">
-										<div class="left-area">
-											<a class="btn caegory-btn" href="#"><b>TRAVEL</b></a>
-										</div>
-										<ul class="right-area social-icons">
-											<li><a href="#"><i class="ion-android-share-alt"></i>Share</a></li>
-											<li><a href="#"><i class="ion-android-favorite-outline"></i>03</a></li>
-											<li><a href="#"><i class="ion-android-textsms"></i>06</a></li>
-										</ul>
-									</div>
-									<h6 class="date"><em>Monday, October 13, 2017</em></h6>
-									<h3 class="title"><a href="#"><b class="light-color">How to paint the wall and street</b></a></h3>
-									<p>Sed ut perspiciatis unde omnis iste natus error sit doloremque
-										 laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi
-										dolore magnam aliquam quaerat voluptatem.</p>
-									<a class="btn read-more-btn" href="#"><b>READ MORE</b></a>
-								</div><!-- single-post -->
+										<div class="single-post">
+									
+										</div><!-- single-post -->
 							</div><!-- col-sm-6 -->
 							<div class="col-lg-6 col-md-12">
-								<div class="single-post">
-									<div class="image-wrapper"><img src="<php <?php echo base_url('assets_home/');?>images/blog-4-500x400.jpg" alt="Blog Image"></div>
-
-									<div class="icons">
-										<div class="left-area">
-											<a class="btn caegory-btn" href="#"><b>TRAVEL</b></a>
-										</div>
-										<ul class="right-area social-icons">
-											<li><a href="#"><i class="ion-android-share-alt"></i>Share</a></li>
-											<li><a href="#"><i class="ion-android-favorite-outline"></i>03</a></li>
-											<li><a href="#"><i class="ion-android-textsms"></i>06</a></li>
-										</ul>
-									</div>
-									<h6 class="date"><em>Monday, October 13, 2017</em></h6>
-									<h3 class="title"><a href="#"><b class="light-color">One more night in the local clubs</b></a></h3>
-									<p>Sed ut perspiciatis unde omnis iste natus error sit doloremque
-										 laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi
-										dolore magnam aliquam quaerat voluptatem.</p>
-									<a class="btn read-more-btn" href="#"><b>READ MORE</b></a>
-								</div><!-- single-post -->
+								
 							</div><!-- col-sm-6 -->
 
-							<div class="col-lg-6 col-md-12">
-								<div class="single-post">
-									<div class="image-wrapper"><img src=" <?php 	echo base_url('assets_home/'); ?>images/blog-5-500x400.jpg" alt="Blog Image"></div>
-
-									<div class="icons">
-										<div class="left-area">
-											<a class="btn caegory-btn" href="#"><b>TRAVEL</b></a>
-										</div>
-										<ul class="right-area social-icons">
-											<li><a href="#"><i class="ion-android-share-alt"></i>Share</a></li>
-											<li><a href="#"><i class="ion-android-favorite-outline"></i>03</a></li>
-											<li><a href="#"><i class="ion-android-textsms"></i>06</a></li>
-										</ul>
-									</div>
-									<h6 class="date"><em>Monday, October 13, 2017</em></h6>
-									<h3 class="title"><a href="#"><b class="light-color">A new festival in your town</b></a></h3>
-									<p>Sed ut perspiciatis unde omnis iste natus error sit doloremque
-										 laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi
-										dolore magnam aliquam quaerat voluptatem.</p>
-									<a class="btn read-more-btn" href="#"><b>READ MORE</b></a>
-								</div><!-- single-post -->
-							</div><!-- col-sm-6 -->
+										<div class="col-lg-6 col-md-12">
+								
+										</div><!-- col-sm-6 -->
 
 							<div class="col-lg-6 col-md-12">
-								<div class="single-post">
-									<div class="image-wrapper"><img src="<?php 	echo base_url('assets_home/'); ?>images/blog-6-500x400.jpg" alt="Blog Image"></div>
-
-									<div class="icons">
-										<div class="left-area">
-											<a class="btn caegory-btn" href="#"><b>TRAVEL</b></a>
-										</div>
-										<ul class="right-area social-icons">
-											<li><a href="#"><i class="ion-android-share-alt"></i>Share</a></li>
-											<li><a href="#"><i class="ion-android-favorite-outline"></i>03</a></li>
-											<li><a href="#"><i class="ion-android-textsms"></i>06</a></li>
-										</ul>
-									</div>
-									<h6 class="date"><em>Monday, October 13, 2017</em></h6>
-									<h3 class="title"><a href="#"><b class="light-color">How to make your home modern</b></a></h3>
-									<p>Sed ut perspiciatis unde omnis iste natus error sit doloremque
-										 laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi
-										dolore magnam aliquam quaerat voluptatem.</p>
-									<a class="btn read-more-btn" href="#"><b>READ MORE</b></a>
-								</div><!-- single-post -->
+										<div class="single-post">
+										
+										</div><!-- single-post -->
 							</div><!-- col-sm-6 -->
 
 							<div class="col-lg-12 col-md-12">

@@ -5,15 +5,16 @@
     <div class="row align-items-center">
         <div class="col-sm-6">
             <div class="breadcrumbs-area clearfix">
-                <h4 class="page-title pull-left">Galeri</h4>
+                <h4 class="page-title pull-left">Dashboard</h4>
                 <ul class="breadcrumbs pull-left">
+                  
                 </ul>
             </div>
         </div>
         <div class="col-sm-6 clearfix">
             <div class="user-profile pull-right">
                 <img class="avatar user-thumb" src="<?php echo base_url('assets/') ?>assets/images/author/avatar.png" alt="avatar">
-                <h4 class="user-name dropdown-toggle" data-toggle="dropdown">Kumkum Rai <i class="fa fa-angle-down"></i></h4>
+                <h4 class="user-name dropdown-toggle" data-toggle="dropdown">Person <i class="fa fa-angle-down"></i></h4>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="#">Message</a>
                     <a class="dropdown-item" href="#">Settings</a>
@@ -31,21 +32,23 @@
 <div class="col-12 mt-5">
     <div class="card">
         <div class="card-body">
-            <h4 class="header-title">Data Galeri</h4>
-            <button type="button" class="btn btn-primary btn-flat mb-3" onclick="input_form();"> Tambah Data</button>
+            <h4 class="header-title">Data Objekwisata</h4>
+            <button type="button" class="btn btn-primary btn-flat mb-3" onclick="input_form();">Tambah Data</button>
             <div class="data-tables datatable-dark">
                 <table id="product-table" class="display nowrap table table-striped table-bordered" cellspacing="0" width="100%">
                     <thead class="text-capitalize">
                         <tr>
                             <th>No</th>
                             <th>Nama</th>
+                            <th>Keterangan</th>
+                            <th>Harga</th>
+                            <th>Jam Kunjung</th>
                             <th>Foto</th>
+
                             <th>Action</th>
                         </tr>
                     </thead>
                 </table>
-
-               
             </div>
         </div>
     </div>
@@ -63,7 +66,7 @@
     $(document).ready(() => {
         $('#product-table').DataTable( {
             "ajax": {
-                'url': "<?= base_url('Admin/Galeri/getdata') ?>",
+                'url': "<?= base_url('Admin/Objekwisata/getdata') ?>",
             },
             "columns": [
             {
@@ -74,8 +77,11 @@
                     return meta.row + meta.settings._iDisplayStart + 1;
                 }
             },
-            { "data": "judul" },
-            { "data": "foto" },
+            { "data": "nama" },
+            { "data": "keterangan" },
+            { "data": "harga" },
+            { "data": "jam_kunjung" },
+            { "data": "foto"},
             {
                 "data":'id',
                 "visible":true,
@@ -97,7 +103,7 @@
     function input_form() {
         $('#exampleModalLong').modal('show');
         $.ajax({
-            url: "<?php echo base_url('Admin/Galeri/insert') ?>",
+            url: "<?php echo base_url('Admin/Objekwisata/insert') ?>",
             data: null,
             success: function(data)
             {
@@ -108,7 +114,7 @@
     function update_form(id) {
         $('#exampleModalLong').modal('show');
         $.ajax({
-            url: "<?php echo base_url('Admin/Galeri/update/') ?>"+id,
+            url: "<?php echo base_url('Admin/Objekwisata/update/') ?>"+id,
             data: null,
             success: function(data)
             {
@@ -116,7 +122,7 @@
             }
         });
     }
-     function delete_form(id) {
+    function delete_form(id) {
         swal({
           title: "Apakah anda yakin?",
           text: "Setelah anda menghapus, data ini tidak dapat kembali",
@@ -127,7 +133,7 @@
         .then((willDelete) => {
           if (willDelete) {
             $.ajax({
-                url: "<?php echo base_url('Admin/Galeri/delete/') ?>"+id,
+                url: "<?php echo base_url('Admin/Objekwisata/delete/') ?>"+id,
                 data: null,
                 success: function(data)
                 {
