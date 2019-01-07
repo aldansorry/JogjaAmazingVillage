@@ -1,25 +1,26 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Kategori_model extends CI_Model {
+class Galeri_model extends CI_Model {
 
-  var $table = "Kategori";
+  var $table = "Galeri";
   var $primary_key = "id";
   
   public function get_data()
   {
     $this->db->select('*');
     $this->db->from($this->table);
-    $this->db->order_by('nama');
+    $this->db->order_by('id');
     return $this->db->get()->result();
   }
 
-  public function insert_data()
+  public function insert_data($foto)
   {
     $db_debug = $this->db->db_debug;
     $this->db->db_debug = FALSE;
     $set = [
-      'nama' => $this->input->post('nama'),
+      'judul' => $this->input->post('judul'),
+      'foto' => $foto,
     ];
 
     $insert = $this->db->insert($this->table,$set);

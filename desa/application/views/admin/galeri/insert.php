@@ -6,10 +6,17 @@
      <div class="modal-body">
           <?php echo form_open_multipart('',array('id'=>'formdata')) ?>
       <div class="form-group row">
-          <label for="input-nama" class="col-sm-2 col-form-label">nama</label>
+          <label for="input-judul" class="col-sm-2 col-form-label">judul</label>
           <div class="col-sm-10">
-           <input type="text" name="nama" class="form-control" nama="input-nama" placeholder="nama" value="<?php echo set_value('nama') ?>">
-          <?php echo form_error('nama') ?>
+           <input type="text" name="judul" class="form-control" judul="input-judul" placeholder="judul" value="<?php echo set_value('judul') ?>">
+          <?php echo form_error('judul') ?>
+      </div>
+ </div>
+ <div class="form-group row">
+          <label for="input-foto" class="col-sm-2 col-form-label">foto</label>
+          <div class="col-sm-10">
+           <input type="file" name="foto" class="form-control" foto="input-foto" placeholder="foto">
+           <?php echo (isset($error) ? $error : "" ) ?>
       </div>
  </div>
  <?php echo form_close(); ?>
@@ -27,7 +34,7 @@
       var formData = new FormData(this);    
 
       $.ajax({
-          url: "<?php echo base_url('Admin/Kategori/insert') ?>",
+          url: "<?php echo base_url('Admin/Galeri/insert') ?>",
           type: 'POST',
           data: formData,
           success: function (data) {

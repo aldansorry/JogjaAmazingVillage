@@ -41,31 +41,13 @@
                         <tr>
                             <th>No</th>
                             <th>Nama</th>
+                            <th>Foto</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                 </table>
 
-                <table id="dataTable3" class="text-center">
-                    <thead class="text-capitalize">
-                        <tr>
-                            <th>No</th>
-                            <th>Nama</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Airi Satou</td>
-                            <td>Accountant</td>
-                            <td>
-                                <a href="#" class="btn btn-flat btn-success btn-sm">Update</a>
-                                <a href="#" class="btn btn-flat btn-danger btn-sm">Delete</a>
-                            </td>
-                        </tr>
-                        
-                    </tbody>
-                </table>
+               
             </div>
         </div>
     </div>
@@ -83,7 +65,7 @@
     $(document).ready(() => {
         $('#product-table').DataTable( {
             "ajax": {
-                'url': "<?= base_url('Admin/Kategori/getdata') ?>",
+                'url': "<?= base_url('Admin/Galeri/getdata') ?>",
             },
             "columns": [
             {
@@ -94,7 +76,8 @@
                     return meta.row + meta.settings._iDisplayStart + 1;
                 }
             },
-            { "data": "nama" },
+            { "data": "judul" },
+            { "data": "foto" },
             {
                 "data":'id',
                 "visible":true,
@@ -116,7 +99,7 @@
     function input_form() {
         $('#exampleModalLong').modal('show');
         $.ajax({
-            url: "<?php echo base_url('Admin/Kategori/insert') ?>",
+            url: "<?php echo base_url('Admin/Galeri/insert') ?>",
             data: null,
             success: function(data)
             {
@@ -127,7 +110,7 @@
     function update_form(id) {
         $('#exampleModalLong').modal('show');
         $.ajax({
-            url: "<?php echo base_url('Admin/Kategori/update/') ?>"+id,
+            url: "<?php echo base_url('Admin/Galeri/update/') ?>"+id,
             data: null,
             success: function(data)
             {
@@ -135,7 +118,7 @@
             }
         });
     }
-    function delete_form(id) {
+     function delete_form(id) {
         swal({
           title: "Apakah anda yakin?",
           text: "Setelah anda menghapus, data ini tidak dapat kembali",
@@ -146,7 +129,7 @@
         .then((willDelete) => {
           if (willDelete) {
             $.ajax({
-                url: "<?php echo base_url('Admin/Kategori/delete/') ?>"+id,
+                url: "<?php echo base_url('Admin/Galeri/delete/') ?>"+id,
                 data: null,
                 success: function(data)
                 {
