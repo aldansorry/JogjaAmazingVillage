@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.7.4
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 07 Jan 2019 pada 08.53
--- Versi Server: 10.1.19-MariaDB
--- PHP Version: 7.0.13
+-- Generation Time: Jan 08, 2019 at 03:02 PM
+-- Server version: 10.1.26-MariaDB
+-- PHP Version: 7.1.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -23,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `agenda`
+-- Table structure for table `agenda`
 --
 
 CREATE TABLE `agenda` (
@@ -31,58 +33,45 @@ CREATE TABLE `agenda` (
   `tanggal` date NOT NULL,
   `judul` varchar(50) NOT NULL,
   `keterangan` text NOT NULL,
-  `foto` varchar(100) NOT NULL
+  `foto` varchar(100) NOT NULL,
+  `datecreated` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `createdby` varchar(32) DEFAULT NULL,
+  `editedby` varchar(32) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `agenda`
---
-
-INSERT INTO `agenda` (`id`, `tanggal`, `judul`, `keterangan`, `foto`) VALUES
-(1, '2019-08-02', 'oi', 'hm', 'Capture.PNG'),
-(2, '2019-02-01', 'Pulang kampung', 'hehe', 'Capture1.PNG');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `galeri`
+-- Table structure for table `galeri`
 --
 
 CREATE TABLE `galeri` (
   `id` int(11) NOT NULL,
   `judul` varchar(100) NOT NULL,
-  `foto` varchar(100) NOT NULL
+  `foto` varchar(100) NOT NULL,
+  `datecreated` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `createdby` varchar(32) DEFAULT NULL,
+  `editedby` varchar(32) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `galeri`
---
-
-INSERT INTO `galeri` (`id`, `judul`, `foto`) VALUES
-(1, 'oi', 'Capture.PNG');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kategori`
+-- Table structure for table `kategori`
 --
 
 CREATE TABLE `kategori` (
   `id` int(11) NOT NULL,
-  `nama` varchar(30) NOT NULL
+  `nama` varchar(30) NOT NULL,
+  `datecreated` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `createdby` varchar(32) DEFAULT NULL,
+  `editedby` varchar(32) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `kategori`
---
-
-INSERT INTO `kategori` (`id`, `nama`) VALUES
-(2, 'HEHE');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `news`
+-- Table structure for table `news`
 --
 
 CREATE TABLE `news` (
@@ -91,20 +80,16 @@ CREATE TABLE `news` (
   `judul` varchar(100) NOT NULL,
   `isi` text NOT NULL,
   `author` varchar(50) NOT NULL,
-  `foto` varchar(100) NOT NULL
+  `foto` varchar(100) NOT NULL,
+  `datecreated` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `createdby` varchar(32) DEFAULT NULL,
+  `editedby` varchar(32) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `news`
---
-
-INSERT INTO `news` (`id`, `tanggal`, `judul`, `isi`, `author`, `foto`) VALUES
-(2, '2019-01-24', 'libur', 'hehe', 'aldan', 'Capture1.PNG');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `objek_wisata`
+-- Table structure for table `objek_wisata`
 --
 
 CREATE TABLE `objek_wisata` (
@@ -113,16 +98,12 @@ CREATE TABLE `objek_wisata` (
   `keterangan` text NOT NULL,
   `harga` int(20) NOT NULL,
   `jam_kunjung` time NOT NULL,
-  `foto` varchar(100) NOT NULL
+  `foto` varchar(100) NOT NULL,
+  `fk_kategori` int(11) NOT NULL,
+  `datecreated` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `createdby` varchar(32) DEFAULT NULL,
+  `editedby` varchar(32) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `objek_wisata`
---
-
-INSERT INTO `objek_wisata` (`id`, `nama`, `keterangan`, `harga`, `jam_kunjung`, `foto`) VALUES
-(2, '1', '1', 1, '00:00:02', 'Capture18.PNG'),
-(3, 'tumpak sewu', 'alamat lumajang', 200000, '00:00:08', 'Capture19.PNG');
 
 --
 -- Indexes for dumped tables
@@ -156,7 +137,8 @@ ALTER TABLE `news`
 -- Indexes for table `objek_wisata`
 --
 ALTER TABLE `objek_wisata`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_kategori` (`fk_kategori`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -166,27 +148,33 @@ ALTER TABLE `objek_wisata`
 -- AUTO_INCREMENT for table `agenda`
 --
 ALTER TABLE `agenda`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `galeri`
 --
 ALTER TABLE `galeri`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `objek_wisata`
 --
 ALTER TABLE `objek_wisata`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -55,7 +55,7 @@
                 <div class="menu-inner">
                     <nav>
                         <ul class="metismenu" id="menu">
-                            <li><a href="maps.html"><i class="ti-map-alt"></i> <span>Users</span></a></li>
+                            <li><a href="<?php echo base_url('admin/Users') ?>"><i class="ti-map-alt"></i> <span>Users</span></a></li>
                             <li><a href="<?php echo base_url("admin/Desawisata") ?>"><i class="ti-map-alt"></i> <span>Desa Wisata</span></a></li>
                             <li><a href="<?php echo base_url("admin/Review") ?>"><i class="ti-map-alt"></i> <span>Review</span></a></li>
                             <li><a href="<?php echo base_url("admin/Statistik") ?>"><i class="ti-map-alt"></i> <span>Statistik Pengunjung</span></a></li>
