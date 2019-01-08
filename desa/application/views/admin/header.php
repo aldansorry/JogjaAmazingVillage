@@ -58,11 +58,11 @@
                             <li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-dashboard"></i><span>Menu</span></a>
                                 <ul class="collapse">
-                                    <li><a href="Kategori">Kategori</a></li>
-                                    <li><a href="galeri">Galeri</a></li>
-                                    <li><a href="objekwisata">Objek Wisata</a></li>
-                                    <li><a href="agenda">Agenda</a></li>
-                                    <li><a href="news">News</a></li>
+                                    <li><a href="<?php echo base_url('Admin/'); ?>Kategori">Kategori</a></li>
+                                    <li><a href="<?php echo base_url('Admin/'); ?>galeri">Galeri</a></li>
+                                    <li><a href="<?php echo base_url('Admin/'); ?>objekwisata">Objek Wisata</a></li>
+                                    <li><a href="<?php echo base_url('Admin/'); ?>agenda">Agenda</a></li>
+                                    <li><a href="<?php echo base_url('Admin/'); ?>news">News</a></li>
 
                                 </ul>
                             </li>
