@@ -28,8 +28,10 @@ class Review extends CI_Controller {
   }
   public function insert()
   {
+    $this->load->model("Desawisata_model");
     $data = [
       'c_name' => $this->c_name,
+      'desa_wisata' => $this->Desawisata_model->get_data(),
     ];
     $this->form_validation->set_rules('nama','Nama','required');
     if ($this->form_validation->run() == false) {

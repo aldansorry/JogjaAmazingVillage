@@ -22,6 +22,8 @@ class Statistik_model extends CI_Model {
       'bulan' => $this->input->post('bulan'),
       'tahun' => $this->input->post('tahun'),
       'jumlah' => $this->input->post('jumlah'),
+      'fk_desa_wisata' => $this->input->post('fk_desa_wisata'),
+      'fk_users' => $this->input->post('fk_users'),
     ];
 
     $insert = $this->db->insert($this->table,$set);

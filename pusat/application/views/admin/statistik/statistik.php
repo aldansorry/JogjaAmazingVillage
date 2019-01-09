@@ -40,6 +40,8 @@
                             <th>Bulan</th>
                             <th>Tahun</th>
                             <th>Jumlah</th>
+                            <th>Desawisata</th>
+                            <th>Users</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -75,6 +77,8 @@
             { "data": "bulan" },
             { "data": "tahun" },
             { "data": "jumlah" },
+            { "data": "fk_desa_wisata" },
+            { "data": "fk_users" },
             {
                 "data":'id',
                 "visible":true,

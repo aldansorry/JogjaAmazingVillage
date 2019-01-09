@@ -41,6 +41,7 @@
                             <th>Email</th>
                             <th>Rating</th>
                             <th>Keterangan</th>
+                            <th>Desawisata</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -77,6 +78,7 @@
             { "data": "email" },
             { "data": "rating" },
             { "data": "keterangan" },
+            { "data": "fk_desa_wisata" },
             {
                 "data":'id',
                 "visible":true,

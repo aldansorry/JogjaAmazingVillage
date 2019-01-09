@@ -23,6 +23,7 @@ class Review_model extends CI_Model {
       'email' => $this->input->post('email'),
       'rating' => $this->input->post('rating'),
       'keterangan' => $this->input->post('keterangan'),
+      'fk_desa_wisata' => $this->input->post('fk_desa_wisata'),
     ];
 
     $insert = $this->db->insert($this->table,$set);

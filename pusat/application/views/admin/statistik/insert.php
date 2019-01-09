@@ -29,6 +29,28 @@
           </div>
       </div>
 
+      <div class="form-group row">
+        <label for="input-fk_desa_wisata" class="col-sm-2 col-form-label">Desawisata</label>
+      <div class="col-sm-10">
+      <select name="fk_desa_wisata" id="" class="form-control">
+        <?php foreach ($desa_wisata as $value): ?>
+          <option value="<?php echo $value->id ?>"><?php echo $value->nama ?></option>
+        <?php endforeach ?>
+      </select>
+      </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="input-fk_users" class="col-sm-2 col-form-label">Users</label>
+      <div class="col-sm-10">
+      <select name="fk_users" id="" class="form-control">
+        <?php foreach ($desa_wisata as $value): ?>
+          <option value="<?php echo $value->id ?>"><?php echo $value->nama ?></option>
+        <?php endforeach ?>
+      </select>
+      </div>
+      </div>
+
  <?php echo form_close(); ?>
 </div>
 <div class="modal-footer">

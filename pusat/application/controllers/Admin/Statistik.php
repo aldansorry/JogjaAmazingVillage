@@ -28,8 +28,12 @@ class Statistik extends CI_Controller {
   }
   public function insert()
   {
+    $this->load->model("Desawisata_model");
+    $this->load->model("Users_model");
     $data = [
       'c_name' => $this->c_name,
+      'desa_wisata' => $this->Desawisata_model->get_data(),
+      'users' => $this->Users_model->get_data(),
     ];
     $this->form_validation->set_rules('jumlah','jumlah','required');
     if ($this->form_validation->run() == false) {
