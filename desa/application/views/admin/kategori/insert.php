@@ -1,4 +1,4 @@
-<div class="modal-content">
+<div class="modal-content bg-light">
      <div class="modal-header bg-primary">
           <h5 class="modal-title text-white">Tambah Data</h5>
           <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
@@ -10,6 +10,14 @@
           <div class="col-sm-10">
            <input type="text" name="nama" class="form-control" nama="input-nama" placeholder="nama" value="<?php echo set_value('nama') ?>">
           <?php echo form_error('nama') ?>
+      </div>
+ </div>
+ 
+ <div class="form-group row">
+          <label for="input-foto" class="col-sm-2 col-form-label">foto</label>
+          <div class="col-sm-10">
+           <input type="file" name="foto" class="form-control" foto="input-foto" placeholder="foto">
+           <?php echo (isset($error) ? $error : "" ) ?>
       </div>
  </div>
  <?php echo form_close(); ?>

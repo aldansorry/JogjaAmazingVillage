@@ -58,11 +58,11 @@
                             <li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-dashboard"></i><span>Menu</span></a>
                                 <ul class="collapse">
-                                    <li><a href="<?php echo base_url('Admin/'); ?>Kategori">Kategori</a></li>
-                                    <li><a href="<?php echo base_url('Admin/'); ?>galeri">Galeri</a></li>
-                                    <li><a href="<?php echo base_url('Admin/'); ?>objekwisata">Objek Wisata</a></li>
-                                    <li><a href="<?php echo base_url('Admin/'); ?>agenda">Agenda</a></li>
-                                    <li><a href="<?php echo base_url('Admin/'); ?>news">News</a></li>
+                                    <li><a href="<?php echo base_url('Admin/Kategori'); ?>">Kategori</a></li>
+                                    <li><a href="<?php echo base_url('Admin/Galeri'); ?>">Galeri</a></li>
+                                    <li><a href="<?php echo base_url('Admin/Objekwisata'); ?>">Objek Wisata</a></li>
+                                    <li><a href="<?php echo base_url('Admin/Agenda'); ?>">Agenda</a></li>
+                                    <li><a href="<?php echo base_url('Admin/News'); ?>">News</a></li>
 
                                 </ul>
                             </li>
@@ -238,3 +238,30 @@
                             </div>
                         </div>
                     </div>
+
+<!-- header area end -->
+<!-- page title area start -->
+<div class="page-title-area">
+    <div class="row align-items-center">
+        <div class="col-sm-6">
+            <div class="breadcrumbs-area clearfix">
+                <h4 class="page-title pull-left"><?php echo $this->uri->segment(2) ?></h4>
+                <ul class="breadcrumbs pull-left">
+                  
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-6 clearfix">
+            <div class="user-profile pull-right">
+                <img class="avatar user-thumb" src="<?php echo base_url('assets/') ?>assets/images/author/avatar.png" alt="avatar">
+                <h4 class="user-name dropdown-toggle" data-toggle="dropdown">Kumkum Rai <i class="fa fa-angle-down"></i></h4>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Message</a>
+                    <a class="dropdown-item" href="#">Settings</a>
+                    <a class="dropdown-item" href="#">Log Out</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- page title area end -->

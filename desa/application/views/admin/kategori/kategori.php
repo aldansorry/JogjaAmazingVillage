@@ -1,30 +1,5 @@
 
-<!-- header area end -->
-<!-- page title area start -->
-<div class="page-title-area">
-    <div class="row align-items-center">
-        <div class="col-sm-6">
-            <div class="breadcrumbs-area clearfix">
-                <h4 class="page-title pull-left">Dashboard</h4>
-                <ul class="breadcrumbs pull-left">
-                  
-                </ul>
-            </div>
-        </div>
-        <div class="col-sm-6 clearfix">
-            <div class="user-profile pull-right">
-                <img class="avatar user-thumb" src="<?php echo base_url('assets/') ?>assets/images/author/avatar.png" alt="avatar">
-                <h4 class="user-name dropdown-toggle" data-toggle="dropdown">Kumkum Rai <i class="fa fa-angle-down"></i></h4>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Message</a>
-                    <a class="dropdown-item" href="#">Settings</a>
-                    <a class="dropdown-item" href="#">Log Out</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- page title area end -->
+
 
 
 <!-- Primary table end -->
@@ -32,18 +7,14 @@
 <div class="col-12 mt-5">
     <div class="card">
         <div class="card-body">
-            <h4 class="header-title">Data Kategori</h4>
-            <button type="button" class="btn btn-primary btn-flat mb-3" onclick="input_form();">Tambah Data</button>
+            <h4 class="header-title mb-3">
+                Data <?php echo $c_name ?> 
+
+                <button type="button" class="btn btn-sm btn-primary btn-flat float-right mb-3" onclick="input_form();"><i class="fa fa-plus"></i> Tambah Data</button>
+            </h4>
+
             <div class="data-tables datatable-dark">
-                <table id="product-table" class="display nowrap table table-striped table-bordered" cellspacing="0" width="100%">
-                    <thead class="text-capitalize">
-                        <tr>
-                            <th>No</th>
-                            <th>Nama</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                </table>
+                <table id="product-table" class="display nowrap table table-striped table-bordered" cellspacing="0" width="100%"></table>
             </div>
         </div>
     </div>
@@ -52,7 +23,7 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModalLong">
+<div class="modal fade" id="modal">
     <div class="modal-dialog modal-lg" id="modal-content">
 
     </div>
@@ -61,40 +32,61 @@
     $(document).ready(() => {
         $('#product-table').DataTable( {
             "ajax": {
-                'url': "<?= base_url('Admin/Kategori/getdata') ?>",
+                'url': "<?= base_url('Admin/'.$c_name.'/getdata') ?>",
             },
             "columns": [
             {
+                "title" : "No",
+                "width" : "15px",
                 "data": null,
                 "visible":true,
+                "class": "text-center",
                 render: (data, type, row, meta) => {
-
                     return meta.row + meta.settings._iDisplayStart + 1;
                 }
             },
-            { "data": "nama" },
-            {
-                "data":'id',
-                "visible":true,
-                render: (data, type, row) => {
-                    let ret = "";
-                    ret += ' <a href="#" onclick="update_form('+data+'); return false;" class="btn btn-sm btn-rounded btn-success"> <i class="fa fa-pencil"></i> Edit</a>';
-                    ret += ' <a href="#" onclick="delete_form('+data+')" class="btn btn-sm btn-rounded btn-danger"> <i class="fa fa-trash"></i> Delete</a>';
-                    return ret;
+            { 
+                "title" : "Nama",
+                "data": "nama" },
+                {
+                    "title": "Actions",
+                    "width" : "120px",
+                    "data":'id',
+                    "visible":true,
+                    "class": "text-center",
+                    render: (data, type, row) => {
+                        let ret = "";
+                        ret += ' <a href="#" onclick="info_form('+data+'); return false;" class="btn btn-xs btn-rounded btn-info"> <i class="fa fa-info-circle"></i> Lihat</a>';
+                        ret += ' <a href="#" onclick="update_form('+data+'); return false;" class="btn btn-xs btn-rounded btn-success"> <i class="fa fa-pencil"></i> Edit</a>';
+                        ret += ' <a href="#" onclick="delete_form('+data+')" class="btn btn-xs btn-rounded btn-danger"> <i class="fa fa-trash"></i> Hapus</a>';
+                        return ret;
+                    }
                 }
-            }
-            ]
-        } );
+                ]
+            } );
     });
 
     function reload_table() {
         $('#product-table').DataTable().ajax.reload(null,false);
     }
 
-    function input_form() {
-        $('#exampleModalLong').modal('show');
+    function info_form(id) {
+        $('#modal').modal('show');
+
         $.ajax({
-            url: "<?php echo base_url('Admin/Kategori/insert') ?>",
+            url: "<?php echo base_url('Admin/'.$c_name.'/info/') ?>"+id,
+            data: null,
+            success: function(data)
+            {
+                $('#modal-content').html(data);
+            }
+        });
+    }
+
+    function input_form() {
+        $('#modal').modal('show');
+        $.ajax({
+            url: "<?php echo base_url('Admin/'.$c_name.'/insert') ?>",
             data: null,
             success: function(data)
             {
@@ -103,9 +95,9 @@
         });
     }
     function update_form(id) {
-        $('#exampleModalLong').modal('show');
+        $('#modal').modal('show');
         $.ajax({
-            url: "<?php echo base_url('Admin/Kategori/update/') ?>"+id,
+            url: "<?php echo base_url('Admin/'.$c_name.'/update/') ?>"+id,
             data: null,
             success: function(data)
             {
@@ -124,7 +116,7 @@
         .then((willDelete) => {
           if (willDelete) {
             $.ajax({
-                url: "<?php echo base_url('Admin/Kategori/delete/') ?>"+id,
+                url: "<?php echo base_url('Admin/'.$c_name.'/delete/') ?>"+id,
                 data: null,
                 success: function(data)
                 {
@@ -136,7 +128,9 @@
             });
             
         } else {
-            swal("Data aman");
+            swal("Data aman", {
+                icon: "info",
+            });
         }
     });
 

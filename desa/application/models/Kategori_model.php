@@ -14,12 +14,13 @@ class Kategori_model extends CI_Model {
     return $this->db->get()->result();
   }
 
-  public function insert_data()
+  public function insert_data($foto)
   {
     $db_debug = $this->db->db_debug;
     $this->db->db_debug = FALSE;
     $set = [
       'nama' => $this->input->post('nama'),
+      'foto' => $foto,
     ];
 
     $insert = $this->db->insert($this->table,$set);
