@@ -32,124 +32,26 @@
 		<div class="filters">
 			<ul>
 				<li class="active" data-filter="*">All</li>
-				<li data-filter=".corporate">Vector</li>
-				<li data-filter=".personal">Raster</li>
-				<li data-filter=".agency">UI/UX</li>
-				<li data-filter=".portal">Printing</li>
+				<?php foreach ($kategori as $value): ?>
+					<li data-filter="<?php echo '.'.$value->id ?>"><?php echo ucfirst($value->nama) ?></li>
+				<?php endforeach ?>
 			</ul>
 		</div>
 
 		<div class="filters-content">
 			<div class="row grid">
-				<div class="single-portfolio col-sm-4 all corporate">
-					<div class="item">
-						<img src="<?php echo base_url("assets_home/") ?>img/p1.jpg" alt="Work 1">
-						<div class="p-inner">
-							<h4>3D Helmet Design</h4>
-							<div class="cat">Corporate</div>
+				<?php foreach ($objekwisata as $value): ?>
+					<div class="single-portfolio col-sm-4 all <?php echo $value->fk_kategori ?>">
+						<div class="item">
+							<img src="<?php echo base_url("uploads/objekwisata/".$value->foto) ?>" alt="Work 1">
+							<div class="p-inner">
+								<h4><?php echo $value->nama ?></h4>
+								<div class="cat">Corporate</div>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="single-portfolio col-sm-4 all personal">
-					<div class="item">
-						<img src="<?php echo base_url("assets_home/") ?>img/p2.jpg" alt="Work 1">
-						<div class="p-inner">
-							<h4>2D Vinyl Design</h4>
-							<div class="cat">Personal</div>
-						</div>
-					</div>
-				</div>
-				<div class="single-portfolio col-sm-4 all agency">
-					<div class="item">
-						<img src="<?php echo base_url("assets_home/") ?>img/p3.jpg" alt="Work 1">
-						<div class="p-inner">
-							<h5>Creative Poster Design</h5>
-							<div class="cat">Agency</div>
-						</div>
-					</div>
-				</div>
-				<div class="single-portfolio col-sm-4 all portal">
-					<div class="item">
-						<img src="<?php echo base_url("assets_home/") ?>img/p4.jpg" alt="Work 1">
-						<div class="p-inner">
-							<h5>Embosed Logo Design</h5>
-							<div class="cat">Portal</div>
-						</div>
-					</div>
-				</div>
+				<?php endforeach ?>
 
-				<div class="single-portfolio col-sm-4 all corporate">
-					<div class="item">
-						<img src="<?php echo base_url("assets_home/") ?>img/p5.jpg" alt="Work 1">
-						<div class="p-inner">
-							<h4>3D Helmet Design</h4>
-							<div class="cat">Corporate</div>
-						</div>
-					</div>
-				</div>
-				<div class="single-portfolio col-sm-4 all personal">
-					<div class="item">
-						<img src="<?php echo base_url("assets_home/") ?>img/p6.jpg" alt="Work 1">
-						<div class="p-inner">
-							<h4>2D Vinyl Design</h4>
-							<div class="cat">Personal</div>
-						</div>
-					</div>
-				</div>
-				<div class="single-portfolio col-sm-4 all agency">
-					<div class="item">
-						<img src="<?php echo base_url("assets_home/") ?>img/p2.jpg" alt="Work 1">
-						<div class="p-inner">
-							<h5>Creative Poster Design</h5>
-							<div class="cat">Agency</div>
-						</div>
-					</div>
-				</div>
-				<div class="single-portfolio col-sm-4 all portal">
-					<div class="item">
-						<img src="<?php echo base_url("assets_home/") ?>img/p3.jpg" alt="Work 1">
-						<div class="p-inner">
-							<h5>Embosed Logo Design</h5>
-							<div class="cat">Portal</div>
-						</div>
-					</div>
-				</div>		
-				<div class="single-portfolio col-sm-4 all corporate">
-					<div class="item">
-						<img src="<?php echo base_url("assets_home/") ?>img/p4.jpg" alt="Work 1">
-						<div class="p-inner">
-							<h4>3D Helmet Design</h4>
-							<div class="cat">Corporate</div>
-						</div>
-					</div>
-				</div>
-				<div class="single-portfolio col-sm-4 all personal">
-					<div class="item">
-						<img src="<?php echo base_url("assets_home/") ?>img/p3.jpg" alt="Work 1">
-						<div class="p-inner">
-							<h4>2D Vinyl Design</h4>
-							<div class="cat">Personal</div>
-						</div>
-					</div>
-				</div>
-				<div class="single-portfolio col-sm-4 all agency">
-					<div class="item">
-						<img src="<?php echo base_url("assets_home/") ?>img/p2.jpg" alt="Work 1">
-						<div class="p-inner">
-							<h5>Creative Poster Design</h5>
-							<div class="cat">Agency</div>
-						</div>
-					</div>
-				</div>
-				<div class="single-portfolio col-sm-4 all portal">
-					<div class="item">
-						<img src="<?php echo base_url("assets_home/") ?>img/p1.jpg" alt="Work 1">
-						<div class="p-inner">
-							<h5>Embosed Logo Design</h5>
-							<div class="cat">Portal</div>
-						</div>
-					</div>
-				</div>					        		        
 
 			</div>
 		</div>
@@ -179,33 +81,17 @@
 <section class="services-area pb-100">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-4">
-				<div class="single-service">
-					<img class="img-fluid" src="<?php echo base_url("assets_home/") ?>img/s1.png" alt="">
-					<h4>Agenda 1</h4>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.
-					</p>
+			<?php foreach ($agenda as $value): ?>
+				<div class="col-lg-4">
+					<div class="single-service">
+						<img class="img-fluid" src="<?php echo base_url("assets_home/") ?>img/s1.png" alt="">
+						<h4>Agenda 1</h4>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.
+						</p>
+					</div>
 				</div>
-			</div>
-			<div class="col-lg-4">
-				<div class="single-service">
-					<img class="img-fluid" src="<?php echo base_url("assets_home/") ?>img/s2.png" alt="">
-					<h4>Agenda 2</h4>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.
-					</p>
-				</div>
-			</div>
-			<div class="col-lg-4">
-				<div class="single-service">
-					<img class="img-fluid" src="<?php echo base_url("assets_home/") ?>img/s3.png" alt="">
-					<h4>Agenda 3</h4>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.
-					</p>
-				</div>
-			</div>														
+			<?php endforeach ?>													
 		</div>
 	</div>	
 </section>
@@ -222,30 +108,11 @@
 			</div>
 		</div>							
 		<div class="row gallery-item">
-			<div class="col-md-4">
+			<?php foreach ($galeri as $value): ?>
+				<div class="col-md-4">
 				<a href="<?php echo base_url('assets_home/') ?>img/elements/g1.jpg" class="img-pop-up"><div class="single-gallery-image" style="background: url(<?php echo base_url('assets_home/'); ?>img/elements/g1.jpg);"></div></a>
 			</div>
-			<div class="col-md-4">
-				<a href="<?php echo base_url('assets_home/') ?>img/elements/g2.jpg" class="img-pop-up"><div class="single-gallery-image" style="background: url(<?php echo base_url('assets_home/'); ?>img/elements/g2.jpg);"></div></a>
-			</div>
-			<div class="col-md-4">
-				<a href="<?php echo base_url('assets_home/') ?>img/elements/g3.jpg" class="img-pop-up"><div class="single-gallery-image" style="background: url(<?php echo base_url('assets_home/'); ?>img/elements/g3.jpg);"></div></a>
-			</div>
-			<div class="col-md-6">
-				<a href="<?php echo base_url('assets_home/') ?>img/elements/g4.jpg" class="img-pop-up"><div class="single-gallery-image" style="background: url(<?php echo base_url('assets_home/'); ?>img/elements/g4.jpg);"></div></a>
-			</div>
-			<div class="col-md-6">
-				<a href="<?php echo base_url('assets_home/') ?>img/elements/g5.jpg" class="img-pop-up"><div class="single-gallery-image" style="background: url(<?php echo base_url('assets_home/'); ?>img/elements/g5.jpg);"></div></a>
-			</div>
-			<div class="col-md-4">
-				<a href="<?php echo base_url('assets_home/') ?>img/elements/g6.jpg" class="img-pop-up"><div class="single-gallery-image" style="background: url(<?php echo base_url('assets_home/'); ?>img/elements/g6.jpg);"></div></a>
-			</div>
-			<div class="col-md-4">
-				<a href="<?php echo base_url('assets_home/') ?>img/elements/g7.jpg" class="img-pop-up"><div class="single-gallery-image" style="background: url(<?php echo base_url('assets_home/'); ?>img/elements/g7.jpg);"></div></a>
-			</div>
-			<div class="col-md-4">
-				<a href="<?php echo base_url('assets_home/') ?>img/elements/g8.jpg" class="img-pop-up"><div class="single-gallery-image" style="background: url(<?php echo base_url('assets_home/'); ?>img/elements/g8.jpg);"></div></a>
-			</div>
+			<?php endforeach ?>
 		</div>
 	</div>
 </section>
@@ -267,16 +134,16 @@
 
 <div class="container">
 	<div class="section-top-border">
-	<h3 class="mb-30">Left Aligned</h3>
-	<div class="row">
-		<div class="col-md-3">
-			<img src="<?php echo base_url('assets_home/') ?>img/elements/d.jpg" alt="" class="img-fluid">
-		</div>
-		<div class="col-md-9 mt-sm-20">
-			<p>Recently, the US Federal government banned online casinos from operating in America by making it illegal to transfer money to them through any US bank or payment system. As a result of this law, most of the popular online casino networks such as Party Gaming and PlayTech left the United States. Overnight, online casino players found themselves being chased by the Federal government. But, after a fortnight, the online casino industry came up with a solution and new online casinos started taking root. These began to operate under a different business umbrella, and by doing that, rendered the transfer of money to and from them legal. A major part of this was enlisting electronic banking systems that would accept this new clarification and start doing business with me. Listed in this article are the electronic banking systems that accept players from the United States that wish to play in online casinos.</p>
+		<h3 class="mb-30">Left Aligned</h3>
+		<div class="row">
+			<div class="col-md-3">
+				<img src="<?php echo base_url('assets_home/') ?>img/elements/d.jpg" alt="" class="img-fluid">
+			</div>
+			<div class="col-md-9 mt-sm-20">
+				<p>Recently, the US Federal government banned online casinos from operating in America by making it illegal to transfer money to them through any US bank or payment system. As a result of this law, most of the popular online casino networks such as Party Gaming and PlayTech left the United States. Overnight, online casino players found themselves being chased by the Federal government. But, after a fortnight, the online casino industry came up with a solution and new online casinos started taking root. These began to operate under a different business umbrella, and by doing that, rendered the transfer of money to and from them legal. A major part of this was enlisting electronic banking systems that would accept this new clarification and start doing business with me. Listed in this article are the electronic banking systems that accept players from the United States that wish to play in online casinos.</p>
+			</div>
 		</div>
 	</div>
-</div>
 
 </div>
 
