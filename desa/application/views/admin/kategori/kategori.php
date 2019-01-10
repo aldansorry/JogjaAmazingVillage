@@ -45,7 +45,7 @@
                     return meta.row + meta.settings._iDisplayStart + 1;
                 }
             },
-            { 
+                { 
                 "title" : "Nama",
                 "data": "nama" },
                 {

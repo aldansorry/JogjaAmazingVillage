@@ -1,53 +1,19 @@
 
 <!-- header area end -->
 <!-- page title area start -->
-<div class="page-title-area">
-    <div class="row align-items-center">
-        <div class="col-sm-6">
-            <div class="breadcrumbs-area clearfix">
-                <h4 class="page-title pull-left">Desa Wisata</h4>
-            </div>
-        </div>
-        <div class="col-sm-6 clearfix">
-            <div class="user-profile pull-right">
-                <img class="avatar user-thumb" src="<?php echo base_url('assets/') ?>assets/images/author/avatar.png" alt="avatar">
-                <h4 class="user-name dropdown-toggle" data-toggle="dropdown">Kumkum Rai <i class="fa fa-angle-down"></i></h4>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Message</a>
-                    <a class="dropdown-item" href="#">Settings</a>
-                    <a class="dropdown-item" href="#">Log Out</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- page title area end -->
 
 
-<!-- Primary table end -->
-<!-- Dark table start -->
 <div class="col-12 mt-5">
     <div class="card">
         <div class="card-body">
-            <h4 class="header-title">Data Desa Wisata</h4>
-            <button type="button" class="btn btn-primary btn-flat mb-3" onclick="input_form();">Tambah Data</button>
-            <div class="data-tables datatable-dark">
-                <table id="product-table" class="display nowrap table table-striped table-bordered" cellspacing="0" width="100%">
-                    <thead class="text-capitalize">
-                        <tr>
-                            <th>No</th>
-                            <th>Nama</th>
-                            <th>Alamat</th>
-                            <th>Deskripsi</th>
-                            <th>_lat</th>
-                            <th>_long</th>
-                            <th>Foto</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                </table>
+            <h4 class="header-title mb-3">
+                Data <?php echo $c_name ?> 
 
-               
+                <button type="button" class="btn btn-sm btn-primary btn-flat float-right mb-3" onclick="input_form();"><i class="fa fa-plus"></i> Tambah Data</button>
+            </h4>
+
+            <div class="data-tables datatable-dark">
+                <table id="product-table" class="display nowrap table table-striped table-bordered" cellspacing="0" width="100%"></table>
             </div>
         </div>
     </div>
@@ -69,22 +35,48 @@
             },
             "columns": [
             {
+                "title" : "No",
+                "width" : "15px",
                 "data": null,
                 "visible":true,
+                "class": "text-center",
                 render: (data, type, row, meta) => {
-
                     return meta.row + meta.settings._iDisplayStart + 1;
                 }
             },
-            { "data": "nama" },
-            { "data": "alamat" },
-            { "data": "deskripsi" },
-            { "data": "_lat" },
-            { "data": "_long" },
-            { "data": "foto" },
+            { 
+                "title" : "nama",
+                "data": "nama" 
+            },
+            { 
+                "title" : "alamat",
+                "data": "alamat" 
+            },
+            { 
+                "title" : "deskripsi",
+                "data": "deskripsi" 
+            },
+            { 
+                "title" : "_lat",
+                "data": "_lat" 
+            },
+
+            { 
+                "title" : "_long",
+                "data": "_long" 
+            },
+
+            { 
+                "title" : "foto",
+                "data": "foto" 
+            },
+
             {
+               "title": "Actions",
+                "width" : "120px",
                 "data":'id',
                 "visible":true,
+                "class": "text-center",
                 render: (data, type, row) => {
                     let ret = "";
                     ret += ' <a href="#" onclick="update_form('+data+'); return false;" class="btn btn-sm btn-rounded btn-success"> <i class="fa fa-pencil"></i> Edit</a>';
